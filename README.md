@@ -1,7 +1,7 @@
 # Software-Engineering
-maked the website for the Collge mini project
+maked the website for the College mini project
 
-# contaributaion : 
+# contribution : 
 
  - [Utsav Vachhani](https://github.com/utsavvachhani)
  - [Jay Ganjawala](https://github.com/Jay-ganjawala)
