@@ -182,47 +182,6 @@ section {
   color: var(--text-color);
 }
 
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  border: var(--btn-background) 5px solid;
-  border-radius: 10%;
-  padding: 2rem;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-.contact_p{
-  font-size: 1.5rem;
-  margin-bottom: 0.3rem;
-  color: var(--header-text-color);
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #dddddd;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-input[type="submit"] {
-  background-color: var(--btn-background);
-  color: var(--btn-text-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: var(--link-hover-color);
-}
-
 /* Footer Styles */
 footer {
   background-color: #333333;
