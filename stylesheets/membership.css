@@ -41,6 +41,9 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo-img {
@@ -147,24 +150,33 @@ h2 {
 footer {
   background-color: #333333;
   color: #ffffff;
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 footer ul {
-  list-style: none;
   display: flex;
-  justify-content: center;
   gap: 2rem;
+  list-style: none;
 }
 
 footer ul li a {
   color: #ffffff;
   text-decoration: none;
+  transition: text-decoration 0.3s ease-in-out;
 }
 
 footer ul li a:hover {
   text-decoration: underline;
+}
+
+#footer-info {
+  flex: 2;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -176,5 +188,20 @@ footer ul li a:hover {
   .plan-card {
     width: 100%;
     max-width: 350px;
+  }
+
+  header {
+    flex-direction: column;
+    position: relative;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer ul {
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
 }
