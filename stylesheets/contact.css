@@ -167,10 +167,14 @@ footer ul li a:hover {
   /* Responsive Layout */
   nav ul {
     flex-direction: column;
-    position: relative;
     align-items: center;
   }
 
+  header {
+    flex-direction: column;
+    position: relative;
+  }
+  
   footer {
     flex-direction: column;
     text-align: center;

@@ -190,11 +190,16 @@ footer ul li a:hover {
     max-width: 350px;
   }
 
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
   header {
     flex-direction: column;
     position: relative;
   }
-
+  
   footer {
     flex-direction: column;
     text-align: center;
