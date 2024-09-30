@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings - URKJ Fitness House</title>
+  <link rel="stylesheet" href="stylesheets/bookings.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script>
+    function handleBooking(event) {
+      event.preventDefault(); // Prevent form from submitting and refreshing the page
+
+      const name = document.getElementById('name').value;
+      const mobile = document.getElementById('mobile').value;
+      const membershipPlan = document.getElementById('membershipPlan').value;
+      const trainer = document.getElementById('trainer').value;
+
+      alert(`Your details are saved!\n\nName: ${name}\nMobile Number: ${mobile}\nMembership Plan: ${membershipPlan}\nTrainer: ${trainer}\n\nThank you for your registration!`);
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header id="header">
+    <div class="logo">
+      <img class="logo-img" id="header-img" src="images/URKJ_fittnesHouse.jpeg" alt="URKJ - Fitness Gym Logo" />
+    </div>
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="Home.html">Home</a></li>
+        <li><a class="nav-link" href="membership.html">Membership Plans</a></li>
+        <li><a class="nav-link" href="trainers.html">Trainers</a></li>
+        <li><a class="nav-link" href="bookings.html">Bookings</a></li>
+        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="btn">Dark Mode</button>
+  </header>
+
+  <!-- Booking Form Section -->
+  <section id="booking">
+    <h2>Book Your Session</h2>
+    <div class="booking-card">
+      <form id="bookingForm" onsubmit="handleBooking(event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="Your Mobile Number" required>
+        </div>
+        <div class="form-group">
+          <label for="membershipPlan">Membership Plan</label>
+          <select id="membershipPlan" name="membershipPlan" required>
+            <option value="Gold Plan">Gold Plan</option>
+            <option value="Silver Plan">Silver Plan</option>
+            <option value="Bronze Plan">Bronze Plan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="trainer">Select Trainer</label>
+          <select id="trainer" name="trainer" required>
+            <option value="Jhon Maliya">Jhon Maliya</option>
+            <option value="Krupa Rupani">Krupa Rupani</option>
+            <option value="Disha Vishu">Disha Vishu</option>
+          </select>
+        </div>
+        <input type="submit" value="Submit Booking" class="btn">
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div id="footer-info">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact</a></li>
+        <div id="copyright">© 2024 URKJ Fitness House</div>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
