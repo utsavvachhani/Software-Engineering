@@ -196,4 +196,31 @@ footer ul li a:hover {
   .signup-form {
     gap: 0.8rem;
   }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    position: relative;
+  }
+  .logo-img {
+    max-width: 120px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer ul {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
 }
