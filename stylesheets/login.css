@@ -1,5 +1,3 @@
-@import "https://fonts.googleapis.com/css?family=Lato:400,700";
-
 /* General Styles */
 * {
   margin: 0;
@@ -9,11 +7,13 @@
 
 :root {
   --background-color: #ffffff;
-  --text-color: #333333;
+  --text-color: #000000;
   --header-background: #ffffff;
   --header-text-color: #333333;
   --btn-background: #e74c3c;
   --btn-text-color: #ffffff;
+  --input-background: #f0f0f0;
+  --input-text-color: #333333;
   --link-color: #333333;
   --link-hover-color: #e74c3c;
   --section-background-color: linear-gradient(135deg, #ffffff 0%, #e74c3c 100%);
@@ -25,11 +25,19 @@
   --header-background: #1e1e1e;
   --header-text-color: #ffffff;
   --btn-background: #3498db;
-  --btn-text-color: #ffffff;
+  --btn-text-color: #121212;
+  --input-background: #333333;
+  --input-text-color: #ffffff;
   --link-color: #ffffff;
   --link-hover-color: #2980b9;
-  --section-background-color: linear-gradient(135deg, #333333 0%, #3498db 100%);
+  --section-background-color: linear-gradient(135deg, #ffffff 0%, #3498db 100%);
 
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Header Styles */
@@ -68,11 +76,10 @@ nav ul {
   color: var(--link-hover-color);
 }
 
-/* Button Styles */
 .btn {
   background-color: var(--btn-background);
   color: var(--btn-text-color);
-  padding: 0.7rem 1.5rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -84,58 +91,73 @@ nav ul {
   background-color: var(--link-hover-color);
 }
 
-/* Contact Form Section */
-#contact {
-  padding: 50px 2rem;
-  text-align: center;  
+/* Login Section Styles */
+#login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px); /* Full height minus header */
   background: var(--section-background-color);
+  margin: 0;
 }
 
-h2 {
+.login-container {
+  background-color: var(--background-color);
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.5rem;
-  color: var(--text-color);
-}
-
-form {
   max-width: 500px;
-  margin: 0 auto;
-  border: var(--link-hover-color) solid 2px;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.form-group {
-  margin-bottom: 30px;
-  font-size: 25px;
-  font-weight: bold;
-  padding: 5px;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea {
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 25px;
+}
+
+.login-form label {
+  text-align: left;
+}
+
+.login-form input {
+  padding: 1rem;
   border: 1px solid #dddddd;
   border-radius: 5px;
-  margin-bottom: 15px;
+  background-color: var(--input-background);
+  color: var(--input-text-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-input[type="submit"] {
-  background-color: var(--btn-background);
-  color: var(--btn-text-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.login-form input:focus {
+  outline: none;
+  border-color: var(--btn-background);
 }
 
-input[type="submit"]:hover {
-  background-color: var(--link-hover-color);
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.remember-me label {
+  margin: 0;
+}
+
+.signup-prompt {
+  margin-top: 1rem;
+}
+
+.signup-prompt a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.signup-prompt a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
 /* Footer Styles */
@@ -173,24 +195,11 @@ footer ul li a:hover {
 
 @media (max-width: 768px) {
   /* Responsive Layout */
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .login-container {
+    padding: 2rem;
   }
 
-  header {
-    flex-direction: column;
-    position: relative;
+  .login-form {
+    gap: 0.8rem;
   }
-  
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  footer ul {
-    flex-direction: column;
-    margin-bottom: 1rem;
-  }
-
 }

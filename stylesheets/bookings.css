@@ -17,6 +17,7 @@
   --card-color: #f4f4f4;
   --link-color: #333333;
   --link-hover-color: #e74c3c;
+  --section-background-color: linear-gradient(135deg, #ffffff 0%, #e74c3c 100%);
 }
 
 .dark-mode {
@@ -29,6 +30,7 @@
   --card-color: #1e1e1e;
   --link-color: #ffffff;
   --link-hover-color: #2980b9;
+  --section-background-color: linear-gradient(135deg, #121212 0%, #3498db 100%);
 }
 
 /* Header Styles */
@@ -83,11 +85,12 @@ nav ul {
   background-color: var(--link-hover-color);
 }
 
+
 /* Booking Form Section */
 #booking {
-  padding: 50px 2rem;
+  padding: 60px 2rem;
   text-align: center;
-  background-color: var(--background-color);
+  background: var(--section-background-color);
 }
 
 h2 {
@@ -99,7 +102,7 @@ h2 {
 
 .booking-card {
   background-color: var(--card-color);
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 500px;
@@ -108,13 +111,18 @@ h2 {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: left;
+}
+
+.form-group p{
+  color: var(--header-text-color);
+  font-size: 25px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
