@@ -17,7 +17,7 @@
   --card-color: #f4f4f4;
   --link-color: #333333;
   --link-hover-color: #e74c3c;
-  --section-background-color: linear-gradient(135deg, #333333 0%, #e74c3c 100%);
+  --section-background-color: linear-gradient(135deg, #ffffff 0%, #e74c3c 100%);
 }
 
 .dark-mode {
@@ -30,6 +30,7 @@
   --card-color: #1e1e1e;
   --link-color: #ffffff;
   --link-hover-color: #2980b9;
+  --section-background-color: linear-gradient(135deg, #121212 0%, #3498db 100%);
 }
 
 /* Header Styles */
@@ -88,7 +89,7 @@ nav ul {
 #membership-plans {
   padding: 50px 2rem;
   text-align: center;
-  background-color: var(--background-color);
+  background: var(--section-background-color);
 }
 
 h2 {
